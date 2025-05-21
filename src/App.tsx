@@ -1,0 +1,42 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import { LanguageProvider } from './context/LanguageContext';
+import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/HomePage';
+import ContentPage from './pages/ContentPage';
+import TrainingPage from './pages/TrainingPage';
+import InvestigationsPage from './pages/InvestigationsPage';
+import PodcastsPage from './pages/PodcastsPage';
+import CommunityPage from './pages/CommunityPage';
+import AboutPage from './pages/AboutPage';
+
+function App() {
+  return (
+    <ThemeProvider>
+      <LanguageProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<MainLayout />}>
+              <Route index element={<HomePage />} />
+              <Route path="about" element={<AboutPage />} />
+              <Route path="content" element={<ContentPage />} />
+              <Route path="blog/:id" element={<ContentPage />} />
+              <Route path="video/:id" element={<ContentPage />} />
+              <Route path="animation/:id" element={<ContentPage />} />
+              <Route path="training" element={<TrainingPage />} />
+              <Route path="training/:id" element={<TrainingPage />} />
+              <Route path="investigations" element={<InvestigationsPage />} />
+              <Route path="investigations/:id" element={<InvestigationsPage />} />
+              <Route path="podcasts" element={<PodcastsPage />} />
+              <Route path="podcast/:id" element={<PodcastsPage />} />
+              <Route path="community" element={<CommunityPage />} />
+            </Route>
+          </Routes>
+        </Router>
+      </LanguageProvider>
+    </ThemeProvider>
+  );
+}
+
+export default App;
