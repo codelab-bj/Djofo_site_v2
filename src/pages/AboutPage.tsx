@@ -1,4 +1,7 @@
 //import { useState } from 'react';
+import img from '../asset/a.jpg'
+import img2 from '../asset/b.jpg'
+import img3 from '../asset/c.jpg'
 
 export default function AboutPage() {
   return (
@@ -145,16 +148,21 @@ export default function AboutPage() {
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
               <div className="h-4 bg-green-600"></div>
               <div className="p-6">
-                <div className="mx-auto w-32 h-32 rounded-full overflow-hidden bg-green-100 mb-6 border-4 border-yellow-500 shadow-lg">
-                  <div className="w-full h-full bg-green-600 flex items-end justify-center">
+                <div className="mx-auto w-32 h-32 rounded-full overflow-hidden bg-green-100 mb-6 border-4 border-green-500 shadow-lg">
+                  <img 
+                    src={img}
+                    alt="There is an image " 
+                    className="rounded-full"
+                  />
+                  {/* <div className="w-full h-full bg-green-600 flex items-end justify-center">
                     <div className="w-24 h-24 bg-yellow-500 rounded-full relative top-6"></div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="text-center">
                   <h3 className="font-bold text-2xl mb-1">Ibrahim Haliloulaye</h3>
                   <p className="text-green-700 dark:text-green-400 mb-3">Backend Developer</p>
                   <p className="">
-                    Leads our educational initiatives and develops training materials for diverse audiences across Benin.
+                    Incharge of building and maintaining the server-side logic, databases, and application architecture that power web and mobile applications.
                   </p>
                 </div>
               </div>
@@ -164,15 +172,20 @@ export default function AboutPage() {
               <div className="h-4 bg-yellow-600"></div>
               <div className="p-6">
                 <div className="mx-auto w-32 h-32 rounded-full overflow-hidden bg-yellow-100 mb-6 border-4 border-yellow-500 shadow-lg">
-                  <div className="w-full h-full bg-yellow-500 flex items-end justify-center">
+                  <img 
+                    src={img2}
+                    alt="There is an image " 
+                    className="rounded-full"
+                  />
+                  {/* <div className="w-full h-full bg-yellow-500 flex items-end justify-center">
                     <div className="w-24 h-24 bg-red-600 rounded-full relative top-6"></div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="text-center">
                   <h3 className="font-bold text-2xl mb-1">Idris Rasheed</h3>
                   <p className="text-yellow-700 dark:text-yellow-400 mb-3">Frontend Developer</p>
                   <p className="">
-                    Manages our investigation team to uncover digital fraud and disinformation campaigns targeting Beninese citizens.
+                    Incharge of designs and builds websites and web applications.
                   </p>
                 </div>
               </div>
@@ -181,16 +194,21 @@ export default function AboutPage() {
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
               <div className="h-4 bg-red-600"></div>
               <div className="p-6">
-                <div className="mx-auto w-32 h-32 rounded-full overflow-hidden bg-yellow-100 mb-6 border-4 border-yellow-500 shadow-lg">
-                  <div className="w-full h-full bg-yellow-500 flex items-end justify-center">
+                <div className="mx-auto w-32 h-32 rounded-full overflow-hidden bg-yellow-100 mb-6 border-4 border-red-500 shadow-lg">
+                  <img 
+                    src={img3}
+                    alt="There is an image " 
+                    className="rounded-full"
+                  />
+                  {/* <div className="w-full h-full bg-yellow-500 flex items-end justify-center">
                     <div className="w-24 h-24 bg-red-600 rounded-full relative top-6"></div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="text-center">
                   <h3 className="font-bold text-2xl mb-1">Georis</h3>
                   <p className="text-red-700 dark:text-red-400 mb-3">Mobile Developer</p>
                   <p className="">
-                    Coordinates partnerships with local organizations and leads community engagement initiatives.
+                    Incharge of creating software applications for mobile devices such as smartphones and tablets.
                   </p>
                 </div>
               </div>

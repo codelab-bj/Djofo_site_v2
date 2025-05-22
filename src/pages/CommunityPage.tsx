@@ -1,7 +1,8 @@
 import React from 'react';
 import { Users, MessageCircle, Share2, Shield } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import Button from '../components/common/Button';
+//import Button from '../components/common/Button';
+import { Link } from 'react-router-dom';
 
 const CommunityPage: React.FC = () => {
   const { language } = useLanguage();
@@ -86,13 +87,12 @@ const CommunityPage: React.FC = () => {
               : 'Engage in meaningful discussions about digital security, share your experiences, and ask questions.'}
           </p>
 
-          <Button
-            variant="primary"
-            size="lg"
-            className="w-full md:w-auto"
+          <Link
+            className="w-full md:w-auto bg-benin-green-600 hover:bg-benin-green-700 text-white focus:ring-benin-green-500 px-6 py-3 text-lg"
+            to="https://chat.whatsapp.com/C0LhlGoD3hMGPBRlhXQ8wJ"
           >
             {language === 'fr' ? 'Accéder au forum' : 'Access Forum'}
-          </Button>
+          </Link>
         </div>
 
         {/* Community Guidelines */}

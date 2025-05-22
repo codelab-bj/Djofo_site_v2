@@ -151,10 +151,10 @@ const ContentPage: React.FC = () => {
         {/* Page Title */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            {t('nav.content')}
+            {t('Content')}
           </h1>
           <p className="text-gray-600 dark:text-gray-400 max-w-3xl">
-            {t('app.description')}
+            {t('Description')}
           </p>
         </div>
 
@@ -184,7 +184,7 @@ const ContentPage: React.FC = () => {
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'
                 } transition-colors whitespace-nowrap`}
               >
-                {t('content.filter.all')}
+                {t('Content Filter All')}
               </button>
               
               <button
@@ -195,7 +195,7 @@ const ContentPage: React.FC = () => {
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'
                 } transition-colors whitespace-nowrap`}
               >
-                {t('content.filter.blog')}
+                {t('Content Filter Blog')}
               </button>
               
               <button
@@ -206,7 +206,7 @@ const ContentPage: React.FC = () => {
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'
                 } transition-colors whitespace-nowrap`}
               >
-                {t('content.filter.podcast')}
+                {t('Content Filter Podcast')}
               </button>
               
               <button
@@ -217,7 +217,7 @@ const ContentPage: React.FC = () => {
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'
                 } transition-colors whitespace-nowrap`}
               >
-                {t('content.filter.video')}
+                {t('Content Filter Video')}
               </button>
               
               <button
@@ -228,7 +228,7 @@ const ContentPage: React.FC = () => {
                     : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'
                 } transition-colors whitespace-nowrap`}
               >
-                {t('content.filter.animation')}
+                {t('Content Filter Animation')}
               </button>
             </div>
           </div>

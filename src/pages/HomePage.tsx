@@ -64,9 +64,9 @@ const HomePage: React.FC = () => {
             internet risks such as disinformation, online scams, hacking
           </p>
           
-          <button className="bg-red-500 hover:bg-red-600 text-white font-medium px-8 py-4 rounded-md transition-colors">
+          <Link to='https://chat.whatsapp.com/C0LhlGoD3hMGPBRlhXQ8wJ' className="bg-red-500 hover:bg-red-600 text-white font-medium px-8 py-4 rounded-md transition-colors">
             Join the Movement
-          </button>
+          </Link>
         </div>
         
         {/* Right Image */}
@@ -203,9 +203,9 @@ const HomePage: React.FC = () => {
                 citizens with the knowledge and skills to identify and
               </p>
               
-              <button className="bg-amber-300 text-black px-8 py-3 rounded-full font-medium hover:bg-amber-400 transition-colors">
+              <Link to='/community' className="bg-amber-300 text-black px-8 py-3 rounded-full font-medium hover:bg-amber-400 transition-colors">
                 Take Action
-              </button>
+              </Link>
             </div>
           </div>
           
@@ -269,12 +269,12 @@ const HomePage: React.FC = () => {
           </div>
 
           <div className="flex flex-col mt-8">
-            <button className="bg-red-500 text-white px-6 py-3 rounded-md w-40 mx-auto font-medium">
+            {/* <button className="bg-red-500 text-white px-6 py-3 rounded-md w-40 mx-auto font-medium">
               Explore
-            </button>
-            <button className="bg-red-500 text-white px-6 py-3 rounded-md w-40 mx-auto mt-4 font-medium">
+            </button> */}
+            <Link to='/community' className="bg-red-500 text-white px-6 py-3 rounded-md w-40 mx-auto mt-4 font-medium">
               Take Action
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -361,9 +361,9 @@ const HomePage: React.FC = () => {
 
       {/* Call to action button */}
       <div className="text-center mt-8 mb-4">
-        <button className="bg-red-500 text-white px-8 py-3 rounded-md font-medium">
+        <Link to='https://chat.whatsapp.com/C0LhlGoD3hMGPBRlhXQ8wJ' className="bg-red-500 text-white px-8 py-3 rounded-md font-medium">
           Join the Movement
-        </button>
+        </Link>
       </div>
     </div>
       </section>
