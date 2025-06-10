@@ -14,6 +14,8 @@ import image from '../asset/4.png'
 import InvestigationCard from '../components/common/InvestigationCard';
 // import image1 from '../asset/1.png'
 // import image2 from '../asset/2.png'
+import illustration2 from '../asset/2.png';
+import illustration3 from '../asset/3.png';
 
 const HomePage: React.FC = () => {
   const { t } = useLanguage();
@@ -116,7 +118,7 @@ const HomePage: React.FC = () => {
               {/* <div className="w-full h-full bg-[image:url('/src/asset/2.png')] bg-cover bg-center bg-no-repeat">
               </div> */}
               <img 
-                src="/src/asset/2.png"
+                src={illustration2}
                 alt="Illustration"
                 className="w-full h-full object-contain"
                 // style={{ 
@@ -180,7 +182,7 @@ const HomePage: React.FC = () => {
           {/* Left Section (Green Background) */}
           <div className="relative h-96 md:h-[calc(100vh-64px)] text-white p-8 md:p-12 flex flex-col justify-center">
             <img 
-              src="/src/asset/3.png"
+              src={illustration3}
               alt="Background"
               className="absolute inset-0 w-full h-full object-cover"
               // style={{ 
