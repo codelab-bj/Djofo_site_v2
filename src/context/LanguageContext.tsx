@@ -11,10 +11,8 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<LanguageType>(() => {
-    const savedLanguage = localStorage.getItem('language') as LanguageType;
-    return savedLanguage || 'fr';
-  });
-
+    return (localStorage.getItem('language') as LanguageType) || 'fr';
+});
   const [translations, setTranslations] = useState<Record<string, Record<string, string>>>({});
 
   useEffect(() => {
@@ -24,8 +22,8 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         const enTranslations = await import('../locales/en.json');
         
         setTranslations({
-          fr: frTranslations,
-          en: enTranslations
+          fr: frTranslations.default,
+          en: enTranslations.default
         });
       } catch (error) {
         console.error('Failed to load translations:', error);

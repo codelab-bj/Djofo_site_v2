@@ -232,14 +232,43 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navigation = [
-    { name: t('Home'), href: '/' },
-    { name: t('Content'), href: '/content' },
-    { name: t('Training'), href: '/training' },
-    { name: t('Community'), href: '/community' },
-    { name: t('Investigations'), href: '/investigations' },
-    { name: t('Podcasts'), href: '/podcasts' },
-  ];
+// Translation data
+// const translations: {
+//   [lang in 'en' | 'fr']: { [key: string]: string }
+// } = {
+//   en: {
+//     "nav.home": "Home",
+//     "nav.content": "Content Center",
+//     "nav.training": "Online Training",
+//     "nav.community": "Community",
+//     "nav.investigations": "Investigations",
+//     "nav.podcasts": "Podcasts",
+//     "language_label": "Language"
+//   },
+//   fr: {
+//     "nav.home": "Accueil",
+//     "nav.content": "Centre de Contenu",
+//     "nav.training": "Formation en Ligne",
+//     "nav.community": "Communauté",
+//     "nav.investigations": "Enquêtes",
+//     "nav.podcasts": "Podcasts",
+//     "language_label": "Langue"
+//   }
+// };
+
+// Add this translation function at the top of your component or as a custom hook
+
+
+// interface UseTranslationResult {
+//   t: (key: string) => string;
+// }
+
+// const useTranslation = (language: 'en' | 'fr'): UseTranslationResult => {
+//   const t = (key: string): string => {
+//     return translations[language][key] || key;
+//   };
+//   return { t };
+// };
 
   return (
     <header
@@ -263,7 +292,14 @@ const Header = () => {
 
           {/* Desktop Navigation - Added ml-12 for more spacing from logo */}
           <nav className="hidden md:flex ml-12 space-x-8">
-            {navigation.map((item) => (
+            {[
+              { name: t('nav.home'), href: '/' },
+              { name: t('nav.content'), href: '/content' },
+              { name: t('nav.training'), href: '/training' },
+              { name: t('nav.community'), href: '/community' },
+              { name: t('nav.investigations'), href: '/investigations' },
+              { name: t('nav.podcasts'), href: '/podcasts' }
+            ].map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
@@ -353,7 +389,14 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg animate-slide-down">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navigation.map((item) => (
+            {[
+              { name: t('nav.home'), href: '/' },
+              { name: t('nav.content'), href: '/content' },
+              { name: t('nav.training'), href: '/training' },
+              { name: t('nav.community'), href: '/community' },
+              { name: t('nav.investigations'), href: '/investigations' },
+              { name: t('nav.podcasts'), href: '/podcasts' }
+            ].map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
@@ -366,7 +409,7 @@ const Header = () => {
 
             <div className="px-3 py-2">
               <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                {language === 'fr' ? 'Langue' : 'Language'}
+                {t('language_label')}
               </div>
               <div className="flex space-x-2">
                 <button

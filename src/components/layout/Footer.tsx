@@ -6,10 +6,71 @@ import { useLanguage } from '../../context/LanguageContext';
 import Log from '../../asset/Logo2.png';
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const {language: contextLanguage } = useLanguage();
   const currentYear = new Date().getFullYear();
+  const language: Language = contextLanguage || 'en';
 
-  return (
+type Language = 'en' | 'fr';
+type TranslationKey =
+  | "footer.description"
+  | "footer.content"
+  | "footer.podcasts"
+  | "footer.training"
+  | "footer.investigations"
+  | "footer.community"
+  | "footer.resources"
+  | "footer.contact"
+  | "footer.newsletter"
+  | "footer.subscribe"
+  | "footer.rights"
+  | "footer.about"
+  | "footer.privacy"
+  | "footer.terms";
+
+const translations: Record<Language, Record<TranslationKey, string>> = {
+  en: {
+    "footer.description": "The theft is over — Empowering digital citizens against online threats.",
+    "footer.content": "Content",
+    "footer.podcasts": "Podcasts",
+    "footer.training": "Training",
+    "footer.investigations": "Investigations",
+    "footer.community": "Community",
+    "footer.resources": "Resources",
+    "footer.contact": "Contact",
+    "footer.newsletter": "Newsletter",
+    "footer.subscribe": "Subscribe",
+    "footer.rights": "All rights reserved",
+    "footer.about": "About",
+    "footer.privacy": "Privacy Policy",
+    "footer.terms": "Terms of Use"
+  },
+  fr: {
+    "footer.description": "Le vol est terminé — Autonomiser les citoyens numériques contre les menaces en ligne.",
+    "footer.content": "Contenu",
+    "footer.podcasts": "Podcasts",
+    "footer.training": "Formation",
+    "footer.investigations": "Enquêtes",
+    "footer.community": "Communauté",
+    "footer.resources": "Ressources",
+    "footer.contact": "Contact",
+    "footer.newsletter": "Newsletter",
+    "footer.subscribe": "S'abonner",
+    "footer.rights": "Tous droits réservés",
+    "footer.about": "À propos",
+    "footer.privacy": "Confidentialité",
+    "footer.terms": "Conditions d'utilisation"
+  }
+};
+
+const useTranslation = (language: Language) => {
+  const t = (key: TranslationKey) => {
+    return translations[language][key] || key;
+  };
+  return { t };
+};
+
+// Your updated footer component
+return (
     <footer className="bg-gray-100 dark:bg-gray-900 pt-12 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -22,7 +83,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              {t(' The theft is over — Empowering digital citizens against online threats. ')}
+              {useTranslation(language).t('footer.description')}
             </p>
             <div className="flex space-x-4 mt-4">
               <a
@@ -59,7 +120,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="md:col-span-1">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              {t('Content')}
+              {useTranslation(language).t('footer.content')}
             </h3>
             <ul className="space-y-2">
               <li>
@@ -75,7 +136,7 @@ const Footer = () => {
                   to="/podcasts"
                   className="text-gray-600 dark:text-gray-400 hover:text-benin-green-600 dark:hover:text-benin-green-400 transition-colors"
                 >
-                  {t('Podcasts')}
+                  {useTranslation(language).t('footer.podcasts')}
                 </Link>
               </li>
               <li>
@@ -100,7 +161,7 @@ const Footer = () => {
           {/* Resources */}
           <div className="md:col-span-1">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Ressources
+              {useTranslation(language).t('footer.resources')}
             </h3>
             <ul className="space-y-2">
               <li>
@@ -108,7 +169,7 @@ const Footer = () => {
                   to="/training"
                   className="text-gray-600 dark:text-gray-400 hover:text-benin-green-600 dark:hover:text-benin-green-400 transition-colors"
                 >
-                  {t('Training')}
+                  {useTranslation(language).t('footer.training')}
                 </Link>
               </li>
               <li>
@@ -116,7 +177,7 @@ const Footer = () => {
                   to="/investigations"
                   className="text-gray-600 dark:text-gray-400 hover:text-benin-green-600 dark:hover:text-benin-green-400 transition-colors"
                 >
-                  {t('Investigations')}
+                  {useTranslation(language).t('footer.investigations')}
                 </Link>
               </li>
               <li>
@@ -124,7 +185,7 @@ const Footer = () => {
                   to="/community"
                   className="text-gray-600 dark:text-gray-400 hover:text-benin-green-600 dark:hover:text-benin-green-400 transition-colors"
                 >
-                  {t('Community')}
+                  {useTranslation(language).t('footer.community')}
                 </Link>
               </li>
             </ul>
@@ -133,7 +194,7 @@ const Footer = () => {
           {/* Contact */}
           <div className="md:col-span-1">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Contact
+              {useTranslation(language).t('footer.contact')}
             </h3>
             <div className="flex items-center space-x-3 mb-3">
               <Mail className="h-5 w-5 text-gray-500 dark:text-gray-400" />
@@ -150,7 +211,7 @@ const Footer = () => {
                   htmlFor="newsletter"
                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
                 >
-                  Newsletter
+                  {useTranslation(language).t('footer.newsletter')}
                 </label>
                 <input
                   type="email"
@@ -164,7 +225,7 @@ const Footer = () => {
                 type="submit"
                 className="w-full bg-benin-green-600 hover:bg-benin-green-700 text-white py-2 px-4 rounded-md transition-colors"
               >
-                S'abonner
+                {useTranslation(language).t('footer.subscribe')}
               </button>
             </form>
           </div>
@@ -173,32 +234,32 @@ const Footer = () => {
         <div className="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              &copy; {currentYear} Djofo.bj - {t('Rights')}
+              &copy; {currentYear} Djofo.bj - {useTranslation(language).t('footer.rights')}
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <Link
                 to="/about"
                 className="text-gray-600 dark:text-gray-400 hover:text-benin-green-600 dark:hover:text-benin-green-400 text-sm transition-colors"
               >
-                {t('About')}
+                {useTranslation(language).t('footer.about')}
               </Link>
               <Link
                 to="/contact"
                 className="text-gray-600 dark:text-gray-400 hover:text-benin-green-600 dark:hover:text-benin-green-400 text-sm transition-colors"
               >
-                {t('Contact')}
+                {useTranslation(language).t('footer.contact')}
               </Link>
               <Link
                 to="/privacy"
                 className="text-gray-600 dark:text-gray-400 hover:text-benin-green-600 dark:hover:text-benin-green-400 text-sm transition-colors"
               >
-                {t('Privacy')}
+                {useTranslation(language).t('footer.privacy')}
               </Link>
               <Link
                 to="/terms"
                 className="text-gray-600 dark:text-gray-400 hover:text-benin-green-600 dark:hover:text-benin-green-400 text-sm transition-colors"
               >
-                {t('Terms')}
+                {useTranslation(language).t('footer.terms')}
               </Link>
             </div>
           </div>

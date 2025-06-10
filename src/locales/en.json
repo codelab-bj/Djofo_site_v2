@@ -1,18 +1,30 @@
 {
   "app.title": "Djofo.bj",
   "app.description": "Digital Security Awareness in Benin",
-  
+ 
   "nav.home": "Home",
   "nav.content": "Content Center",
   "nav.training": "Online Training",
   "nav.community": "Community",
   "nav.investigations": "Investigations",
   "nav.podcasts": "Podcasts",
-
+  "language_label": "Language",
+  
+  "home.hero.empowering": "EMPOWERING BENIN'S",
+  "home.hero.future": "DIGITAL FUTURE",
+  "home.hero.description": "Djofo.bj is a web platform dedicated to raising awareness, informing, and educating communities in Benin about internet risks such as disinformation, online scams, hacking",
+  "home.hero.join": "Join the Movement",
+  
+  "home.features.explore": "Explore the Risks",
+  "home.features.protecting": "PROTECTING BENIN'S DIGITAL LANDSCAPE",
+  "home.features.navigating": "NAVIGATING THE ONLINE WORLD",
+  "home.features.security_paragraph": "Online security is a shared responsibility. Djofo.bj provides resources and guidance to help individuals and communities in Benin stay safe and informed in the digital age. By raising awareness and promoting digital literacy, we aim to empower Beninese citizens to make informed decisions and protect themselves from digital threats.",
+  "home.features.learn_more": "Learn More",
+  
   "home.hero.title": "Protect Yourself Against Digital Risks",
   "home.hero.subtitle": "Djofo.bj informs and educates you about Internet risks and cybersecurity in Benin",
   "home.hero.cta": "Discover our resources",
-  
+ 
   "home.features.title": "How We Help You",
   "home.features.education.title": "Education",
   "home.features.education.description": "Learn to recognize and avoid online traps",
@@ -22,16 +34,66 @@
   "home.features.community.description": "Join our community to share your experiences",
   "home.features.training.title": "Training",
   "home.features.training.description": "Follow our training modules for optimal protection",
-
+  
   "home.latestContent.title": "Latest Content",
   "home.latestContent.viewAll": "View All",
+  
+  "home.cta.navigation": "Navigation",
+  "home.cta.protecting": "Protecting Benin's Digital Future",
+  "home.cta.description": "Join us in building a safer digital environment for all Beninese citizens.",
+  "home.cta.takeAction": "Take Action",
+  
+  "home.community.securing": "Securing Digital Benin",
+  "home.community.connecting": "Connecting Communities",
+  "home.community.fostering": "Fostering Digital Awareness",
+  "home.community.promoting": "Promoting Digital Literacy",
+  "home.community.embracing": "Embracing the Digital",
+  "home.community.safeguarding": "Safeguarding Digital Privacy",
+  "home.community.cultivating": "Cultivating Digital",
+  "home.community.empowering": "Empowering Benin's Digital",
+  "home.community.navigating": "Navigating the",
+  "home.community.resilience": "Fostering Digital Resilience",
+  "home.community.rights": "Protecting Digital Rights",
+  "home.community.building": "Building Digital",
 
+
+  
+  "Training": "Training",
+  "View All": "View All",
+  "Investigations": "Investigations",
+  "View All Investigations": "View All Investigations",
+  
   "content.filter.all": "All",
   "content.filter.blog": "Blog",
   "content.filter.podcast": "Podcast",
   "content.filter.video": "Video",
   "content.filter.animation": "Animation",
-  
+
+  "home.community.securing": "Securing Digital Benin",
+  "home.community.connecting": "Connecting Communities",
+  "home.community.fostering": "Fostering Digital Awareness",
+  "home.community.promoting": "Promoting Digital Literacy",
+  "home.community.take_action": "Take Action",
+  "home.community.digital_empowerment": "At Djofo.bj, we believe that empowering Benin's digital citizens is key to building a more secure and resilient",
+  "home.community.embracing_digital": "Embracing the Digital",
+  "home.community.safeguarding_privacy": "Safeguarding Digital Privacy",
+  "home.community.cultivating_digital": "Cultivating Digital",
+  "home.community.ecosystem_desc": "Djofo.bj is committed to creating a digital ecosystem in Benin that is secure, inclusive",
+  "home.community.empowering_digital": "Empowering Benin's Digital",
+  "home.community.navigating_digital": "Navigating the",
+  "home.community.digital_future": "At Djofo.bj, we believe that digital empowerment is the key to a brighter, more secure digital future for Benin",
+  "home.community.fostering_resilience": "Fostering Digital Resilience",
+  "home.community.promoting_digital": "Promoting Digital",
+  "home.community.thrive_digital": "Djofo.bj is dedicated to empowering the people of Benin to thrive in the digital age",
+  "home.community.navigating_digital_title": "Navigating Digital",
+  "home.community.digital_literacy": "At Djofo.bj, we believe that digital literacy and online safety are essential for the",
+  "home.community.protecting_rights": "Protecting Digital Rights",
+  "home.community.building_digital": "Building Digital",
+  "home.community.active_role": "Djofo.bj is dedicated to promoting digital literacy and empowering Beninese citizens to take an active",
+  "home.community.join_movement": "Join the Movement",
+  "alt.community_image": "Community member",
+
+ 
   "footer.rights": "All rights reserved",
   "footer.about": "About",
   "footer.contact": "Contact",
