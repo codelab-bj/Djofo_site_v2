@@ -153,7 +153,7 @@ const HomePage: React.FC = () => {
   
  
       {/* Latest Content Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
@@ -364,7 +364,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       {/* Latest Investigation */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
